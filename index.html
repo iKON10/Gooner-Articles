@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet" />
+    <title>iKON10 Gooner</title>
+  </head>
+  <body>
+  	<div id="wrapper">
+	    <header>
+	    	<div id="page-banner">
+	    		<h1 class="title">Kefa's Guide to Arsenal FC</h1>
+          <p>Articles for Gooners</p>
+          <form id="search-books">
+            <input type="text" placeholder="Search Articles..." />
+          </form>
+	    	</div>
+	    </header>
+        <button class="toggle-articles">Show/Hide Articles</button>
+	    <div id="article-list">
+	    	<h2 class="title">Articles to Read</h2>
+	    	<ul>
+	    		<li>
+	    			<span class="name">The Invincibles</span>
+	    			<a href="https://www.arsenal.com/history/the-wenger-years/the-2004-invincibles" class="read-article">Read</a>
+	    		</li>
+	    		<li>
+	    			<span class="name">Latest News, Highlights and Club Highlights</span>
+	    			<a href="https://rb.gy/xfxn2q" class="read-article">Read</a>
+	    		</li>
+	    		<li>
+	    			<span class="name">Arsenal Transfer News</span>
+	    			<a href="https://rb.gy/vz8x8m" class="read-article">Read</a>
+	    		</li>
+	    		<li>
+	    			<span class="name">Pain In The Arsenal: AFC News and Fan Community</span>
+	    			<a href="https://paininthearsenal.com/" class="read-article">Read</a>
+	    		</li>
+	    	</ul>
+	    </div>
+	    <form id="add-articles">
+        <input type="checkbox" id="hide" />
+        <label for="hide">Hide all Articles</label>
+	    	<input type="text" placeholder="Add an Article..." />
+	    	<button>Add</button>
+	    </form>
+      <div id="tabbed-content">
+        <ul class="tabs">
+          <li data-target="#about" class="active">About</li>
+          <li data-target="#contact">Contact</li>
+        </ul>
+        <div class="panel active" id="about">
+          <p>Content for about tab...</p>
+          <p>Kefa is a seasoned writer with amazing content for all readers.</p>
+        </div>
+        <div class="panel active" id="contact">
+          <p>Content for contact tab...</p>
+          <p>Reach the author through E-mail or Whatsapp</p>
+            
+          <button class="mail" onclick="emailLink()">Email</button>
+          <button class="whatsapp" onclick="whatsappLink()">Whatsapp</button>
+            
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
