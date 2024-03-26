@@ -61,7 +61,7 @@ h1, h2{
 }
 
 #article-list li:hover{
-    border-color:blue;
+    border-color:#e62424;
 }
 
 .read-article{
@@ -108,6 +108,13 @@ h1, h2{
     margin: 20px 0;
     border-left: 0;
     color: white;
+}
+
+.toggle-articles{
+border: 1px solid black;
+padding: 10px 20px;
+cursor: pointer;
+color: whitesmoke;
 }
 
 #add-articles:after{
@@ -178,4 +185,8 @@ h1, h2{
     cursor: pointer;
     color: #333;
     text-decoration: none; /* Remove underline from anchor tag by default */
+  }
+
+  .read-article:hover{
+    background: #e62424;
   }
