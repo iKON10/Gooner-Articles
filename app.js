@@ -14,6 +14,21 @@ readButtons.forEach(button => {
   });
 });
 
+const emailButton = document.querySelector('.mail');
+emailButton.addEventListener('click', emailLink)
+function emailLink(){
+  const emailAddress = "netxikon10@gmail.com";
+  const subject = "Inquiry from Kefa's Guide To Arsenal FC";
 
+  //Construct email link with pre-filled details
+  const mailtoLink = `mailto:${emailAddress}?subject=${subject}`;
+   //Open the link in a new tab
+   window.open(mailtoLink, 'blank');
+}
 
+const whatsappButton = document.querySelector('.whatsapp')
+function whatsappLink() {
+  const whatsappUrl = "https://wa.me/+254793815657/";
+  window.open(whatsappUrl, '_blank');
+}
 
