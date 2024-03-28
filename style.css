@@ -1,39 +1,41 @@
-body{
+
+body {
     font-family: Tahoma;
     color: #444;
     letter-spacing: 1px;
 }
 
-h1, h2{
+h1,
+h2 {
     font-weight: normal;
 }
 
-#wrapper{
+#wrapper {
     width: 90%;
     max-width: 960px;
     margin: 20px auto;
     border-radius: 6px;
-    box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     padding: 0 0 20px;
     overflow: hidden;
     border: 1px solid lightgray;
 }
 
-#page-banner{
-    background: #e62424 ;
+#page-banner {
+    background: #e62424;
     padding: 10px 0;
-
 }
 
-#page-banner h1, #page-banner p{
+#page-banner h1,
+#page-banner p {
     width: 100%;
     text-align: center;
     margin: 10px 0;
     color: whitesmoke;
 }
 
-#page-banner input{
+#page-banner input {
     width: 90%;
     max-width: 300px;
     margin: 20px auto;
@@ -45,26 +47,17 @@ h1, h2{
     color: #444;
 }
 
-#article-list, #add-article, #tabbed-content{
-    margin: 30px;
-}
-
-#article-list ul, #tabbed-content ul{
-    list-style-type: none;
-    padding: 0;
-}
-
-#article-list li{
+#article-list li {
     padding: 20px;
     border-left: 5px solid #ddd;
     margin: 20px 10px;
 }
 
-#article-list li:hover{
-    border-color:#e62424;
+#article-list li:hover {
+    border-color: #e62424;
 }
 
-.read-article{
+.read-article {
     float: right;
     background: green;
     padding: 6px;
@@ -73,120 +66,44 @@ h1, h2{
     color: white;
 }
 
-.delete:hover{
-    background: #941919;
+.btn.read-article:hover {
+    background: #24e695;
 }
 
-#add-articles{
-    width: 400px;
-    margin: 0 auto;
+
+.btn.whatsapp, .btn.mail, .btn.read-article{
+    background-color: #e62424;
 }
 
-#add-articles input{
-    display: block;
-    margin: 20px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    border-radius: 4px 0 0 4px;
-    box-sizing: border-box;
-    width: 300px;
-    float: left;
-    clear: both;
+.menu-content li{
+    color: #e62424;
 }
 
-#add-articles button{
-    border: 1px solid #9361bf;
-    background: green;
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 0;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    width: 100px;
-    float: left;
-    margin: 20px 0;
-    border-left: 0;
-    color: white;
-}
-
-.toggle-articles{
-border: 1px solid black;
-padding: 10px 20px;
-cursor: pointer;
-color: whitesmoke;
-}
-
-#add-articles:after{
-    content: '';
-    display: block;
-    clear: both;
-}
-
-#add-articles #hide{
-  width: 30px;
-}
-
-#add-articles label{
-  line-height: 52px;
-}
-
-#tabbed-content li{
-    display: inline-block;
-    padding: 10px 14px;
-    background: #ddd;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-#tabbed-content .panel{
-    display: none;
-    border: 1px solid #ddd;
-    padding: 0 10px;
-    border-radius: 4px;
-}
-
-#tabbed-content .panel.active{
-    display: block;
-}
-
-.whatsapp, .mail{
-    border: 1px solid #9361bf;
-    background: green;
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 0;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    width: 100px;
-    float: left;
-    margin: 20px 0;
-    border-left: 0;
-    color: white;
-}
-#tabbed-content > ul.tabs li:hover{
-    background: #52c7aa;
- }
-
- .toggle-articles{
-    background: green;
- }
-
- .hidden {
-    display: none;
+.dropdown {
+    position: relative;
+    display: inline-block; /* Ensures menu stays inline */
   }
 
-  .read-article {
-    background: #f0f0f0;
-    padding: 5px 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    cursor: pointer;
-    color: #333;
-    text-decoration: none; /* Remove underline from anchor tag by default */
+  .menu-content {
+    display: none; /* Hide menu by default */
+    position: absolute; /* Position menu relative to toggle button */
+    background-color: #fff;
+    min-width: 150px; /* Set minimum width for menu */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add slight shadow */
+    z-index: 1; /* Ensure menu appears above other elements */
   }
 
-  .read-article:hover{
-    background: #e62424;
+  .menu-content.show {
+    display: block; /* Show menu on click */
   }
+
+  .menu-content {
+    position: fixed; /* Fix menu position to top of screen on small screens */
+    top: 100%; /* Position menu below toggle button */
+    left: 0; /* Align menu to left side of screen */
+    width: 100%; /* Make menu full width on small screens */
+  }
+
+  .show {
+    display: block;
+}
