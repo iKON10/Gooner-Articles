@@ -1,19 +1,3 @@
-const toggleButton = document.querySelector('.toggle-articles');
-const articleList = document.getElementById('article-list');
-
-toggleButton.addEventListener('click', () => {
-    articleList.classList.toggle('hidden');  // Add/remove 'hidden' class
-  });
-
-const readButtons = document.querySelectorAll('.read-article');
-
-readButtons.forEach(button => {
-  button.addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent default link behavior
-    window.open(button.href, '_blank'); // Open link in new tab
-  });
-});
-
 const emailButton = document.querySelector('.mail');
 emailButton.addEventListener('click', emailLink)
 function emailLink(){
@@ -32,3 +16,19 @@ function whatsappLink() {
   window.open(whatsappUrl, '_blank');
 }
 
+const dropdownToggle = document.querySelector('.dropdown-toggle');
+const menuContent = document.querySelector('.menu-content');
+
+dropdownToggle.addEventListener('click', function() {
+  console.log("Dropdown clicked!");
+
+  menuContent.classList.toggle('show'); // Toggle 'show' class
+});
+
+const loginButton = document.querySelector('.login');
+const loginForm = document.querySelector('.login-form');
+
+loginButton.addEventListener('click', function() {
+  console.log('Login clicked');
+  loginForm.classList.toggle('show'); // Toggle 'show' class for visibility
+});
