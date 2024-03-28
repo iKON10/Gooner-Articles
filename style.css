@@ -93,12 +93,15 @@ h2 {
     z-index: 1; /* Ensure menu appears above other elements */
   }
 
+  .login-form {
+    display: none;
+  }
+
   .menu-content.show {
     display: block; /* Show menu on click */
   }
 
   .menu-content {
-    position: fixed; /* Fix menu position to top of screen on small screens */
     top: 100%; /* Position menu below toggle button */
     left: 0; /* Align menu to left side of screen */
     width: 100%; /* Make menu full width on small screens */
